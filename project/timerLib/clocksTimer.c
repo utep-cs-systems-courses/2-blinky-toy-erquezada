@@ -5,8 +5,8 @@ void configureClocks(){
   WDTCTL = WDTPW + WDTHOLD;//Disable Watchdog Timer
   BCSCTL1 = CALBC1_16MHZ;  // Set DCO to 16 Mhz
   DCOCTL = CALDCO_16MHZ;
-    
-  BCSCTL2 &= ~(SELS);     // SMCLK source = DCO
+  
+  BCSCTL2 &= ~(SELS);     // SMCLK source = DCO  
   BCSCTL2 |= DIVS_3;      // SMCLK = DCO / 8
 }
 
