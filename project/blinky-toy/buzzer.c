@@ -6,9 +6,10 @@ void buzzer_init() {
   timerAUpmode(); // Used to drive the speaker
 
   // Configure pin P2.6 to be used as output for the buzzer
-  P2SEL &= ~BIT7;
-  P2SEL2 &= ~(BIT6 | BIT7);
-  P2DIR |= BIT6;
+    P2SEL2 &= ~(BIT6 | BIT7);
+    P2SEL &= ~BIT7;
+    P2SEL |= BIT6;
+    P2DIR = BIT6;	/* enable output to speaker (P2.6) */
 }
 
 void buzzer_set_period(short cycles) {

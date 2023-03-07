@@ -29,19 +29,6 @@ static void once_per_second()
   update_blink();
 }
 
-static void update_second()
-{
-  static unsigned char highOn = 0;
-  
-  if (highOn) {
-    highOn = 0;
-    buzzer_set_period(1000); // set frequency to 1000 Hz
-  } else {
-    highOn = 1;
-    buzzer_set_period(500); // set frequency to 500 Hz
-  }
-}
-
 void advance_siren()
 {
   update_second();

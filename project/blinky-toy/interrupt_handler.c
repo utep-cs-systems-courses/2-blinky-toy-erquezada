@@ -1,6 +1,6 @@
 #include <msp430.h>
 #include "switches.h"
-#include "stateMachine.h"
+#include "stateMachines.h"
 
 /* Switch on P2  */
 void __interrupt_vec(PORT2_VECTOR) Port_2(){
